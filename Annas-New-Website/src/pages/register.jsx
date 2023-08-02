@@ -22,7 +22,6 @@ export function Register() {
   const [userType, setUserType] = useState("");
   const [secretKey, setSecretKey] = useState("");
 
-  // Form submission handler
   const handleSubmit = (e) => {
     e.preventDefault();
     if (userType === "Admin" && secretKey !== "Annal") {
