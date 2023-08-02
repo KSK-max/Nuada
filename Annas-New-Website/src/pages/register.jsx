@@ -13,7 +13,7 @@ import {
 } from "@material-tailwind/react";
 import { SimpleFooter } from "@/widgets/layout";
 
-export function register() {
+export function Register() {
   // State variables to store form data
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -165,4 +165,4 @@ export function register() {
   );
 }
 
-export default register;
+export default Register;
