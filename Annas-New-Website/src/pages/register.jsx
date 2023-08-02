@@ -18,21 +18,21 @@ import axios from 'axios'
 export function Register() {
   // State variables to store form data
   // const [fname, setFname] = useState("");
-  // const [lname, setLname] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [userType, setUserType] = useState("");
   const [secretKey, setSecretKey] = useState("");
 
 
 
-  const [name, setName] = useState()
-  const [email, setEmail] = useState()
-  const [password, setPassword] = useState()
+  // const [name, setName] = useState()
+  // const [email, setEmail] = useState()
+  // const [password, setPassword] = useState()
 axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://nuada.vercel.app/register', {name, email, password})
+    axios.post('https://nuada.vercel.app/register', {lname, email, password})
     .then(result => console.log(result))
     .catch(err => console.log(err))
   }
@@ -111,13 +111,13 @@ axios.defaults.withCredentials = true;
           </div>
 
           <CardBody className="flex flex-col gap-4">
-            <Input
+            {/* <Input
               variant="standard"
               label="FName"
               size="lg"
               value={fname}
               onChange={(e) => setFname(e.target.value)}
-            />
+            /> */}
             <Input
               variant="standard"
               label="LName"
