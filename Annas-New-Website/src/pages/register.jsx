@@ -12,7 +12,6 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { SimpleFooter } from "@/widgets/layout";
-import axios from 'axios'
 
 
 export function Register() {
@@ -28,40 +27,37 @@ export function Register() {
   // Form submission handler
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://nuada.vercel.app/register', {name, email, password})
-    .then(result => console.log(result))
-    .catch(err => console.log(err))
-    // e.preventDefault();
-    // if (userType === "Admin" && secretKey !== "Annal") {
-    //   alert("Invalid Admin");
-    // } else {
-    //   console.log(fname, lname, email, password);
-    //   fetch("https://nuada.vercel.app/register", {
-    //     method: "POST",
-    //     crossDomain: true,
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //       Accept: "application/json",
-    //       mode: 'no-cors', 
-    //     },
-    //     body: JSON.stringify({
-    //       fname,
-    //       email,
-    //       lname,
-    //       password,
-    //       userType,
-    //     }),
-    //   })
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //       console.log(data, "userRegister");
-    //       if (data.status === "ok") {
-    //         alert("Registration Successful");
-    //       } else {
-    //         alert("Something went wrong");
-    //       }
-    //     });
-    // }
+    
+    if (userType === "Admin" && secretKey !== "Annal") {
+      alert("Invalid Admin");
+    } else {
+      console.log(fname, lname, email, password);
+      fetch("https://nuada.vercel.app/register", {
+        method: "POST",
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          mode: 'no-cors', 
+        },
+        body: JSON.stringify({
+          fname,
+          email,
+          lname,
+          password,
+          userType,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data, "userRegister");
+          if (data.status === "ok") {
+            alert("Registration Successful");
+          } else {
+            alert("Something went wrong");
+          }
+        });
+    }
   };
 
   return (
