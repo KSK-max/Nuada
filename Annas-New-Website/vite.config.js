@@ -6,4 +6,16 @@ export default defineConfig({
   resolve: {
     alias: [{ find: "@", replacement: "/src" }],
   },
+  server: {
+    proxy: {
+      "/config": {
+        target: "https://nuada.vercel.app/",
+        secure: false,
+      },
+      "/create-payment-intent": {
+        target: "https://nuada.vercel.app/",
+        secure: false,
+      },
+    },
+  },
   });
