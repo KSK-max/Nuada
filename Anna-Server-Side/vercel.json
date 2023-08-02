@@ -3,15 +3,22 @@
     "builds": [
       { "src": "*.js", "use": "@vercel/node" }
     ],
-    "routes": [
+    "rewrites": [
+        { "source": "/(.*)", "destination": "./index.js" }
+    ],
+    "headers": [
         {
-          "src": "/(.*)",
-          "dest": "./index.js",
-          "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-          "headers": {
-            "Access-Control-Allow-Origin": "*"
-          }
-        }
-      ]
+          "source": "/(.*)",
+          "headers": [
+            { "key": "Access-Control-Allow-Origin", "value": "*" }
+          ]
+        },
+        {
+          "source": "/nuada-frontend-nm6xpq3ex-ksk-max.vercel.app/(.*)",
+          "headers": [
+            { "key": "Access-Control-Allow-Origin", "value": "*" }
+          ]
+        }  
+    ]
       
   }
