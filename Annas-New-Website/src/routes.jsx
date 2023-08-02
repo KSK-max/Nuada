@@ -50,7 +50,7 @@ export const routes = [
   {
     icon: UserPlusIcon,
     name: "Sign Up",
-    path: "/sign-up",
+    path: "/register",
     element: <SignUp />,
   },
 
