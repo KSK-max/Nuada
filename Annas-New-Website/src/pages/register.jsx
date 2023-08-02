@@ -35,7 +35,7 @@ export function Register() {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
-          "Access-Control-Allow-Origin": "*",
+          mode: 'no-cors', 
         },
         body: JSON.stringify({
           fname,
