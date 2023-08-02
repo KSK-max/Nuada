@@ -3,22 +3,15 @@
     "builds": [
       { "src": "*.js", "use": "@vercel/node" }
     ],
-    "rewrites": [
-        { "source": "/(.*)", "destination": "./index.js" }
-    ],
-    "headers": [
-        {
-          "source": "/(.*)",
-          "headers": [
-            { "key": "Access-Control-Allow-Origin", "value": "*" }
-          ]
-        },
-        {
-          "source": "/register/(.*)",
-          "headers": [
-            { "key": "Access-Control-Allow-Origin", "value": "*" }
-          ]
-        }  
-    ]
+  "routes": [
+    {
+      "src": "register/(.*)",
+      "dest": "./index.js",
+      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    }
+  ]
       
   }
