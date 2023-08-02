@@ -9,7 +9,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 app.use(cors(
   {
-      origin: ["https://nuada-frontend-nm6xpq3ex-ksk-max.vercel.app/sign-up"],
+      origin: ["https://nuada-frontend-nm6xpq3ex-ksk-max.vercel.app"],
       methods: ["POST", "GET"],
       credentials: true
   }
