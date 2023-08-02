@@ -9,7 +9,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 app.use(cors(
   {
-      origin: ["https://nuada.vercel.app"],
+      origin: ["https://nuada-frontend-nm6xpq3ex-ksk-max.vercel.app"],
       methods: ["POST", "GET"],
       credentials: true
   }
@@ -126,7 +126,7 @@ app.post("/forgot-password", async (req, res) => {
     const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, {
       expiresIn: "5m",
     });
-    const link = `http://localhost:5000/reset-password/${oldUser._id}/${token}`;
+    const link = `https://nuada-frontend-nm6xpq3ex-ksk-max.vercel.app/reset-password/${oldUser._id}/${token}`;
     var transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
