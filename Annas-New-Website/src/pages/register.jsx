@@ -22,7 +22,6 @@ export function Register() {
   const [password, setPassword] = useState("");
   const [userType, setUserType] = useState("");
   const [secretKey, setSecretKey] = useState("");
-  axios.defaults.withCredentials = true;
 
   // Form submission handler
   const handleSubmit = (e) => {
