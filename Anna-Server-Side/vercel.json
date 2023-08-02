@@ -14,7 +14,7 @@
           ]
         },
         {
-          "source": "/nuada-frontend-nm6xpq3ex-ksk-max.vercel.app/(.*)",
+          "source": "/register/(.*)",
           "headers": [
             { "key": "Access-Control-Allow-Origin", "value": "*" }
           ]
