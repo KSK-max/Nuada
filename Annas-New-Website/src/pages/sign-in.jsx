@@ -21,7 +21,7 @@ export function SignIn() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email, password);
-    fetch("http://localhost:5000/login-user", {
+    fetch("https://nuada.vercel.app/login-user", {
       method: "POST",
       crossDomain: true,
       headers: {

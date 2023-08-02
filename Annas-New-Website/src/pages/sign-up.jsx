@@ -29,7 +29,7 @@ export function SignUp() {
       alert("Invalid Admin");
     } else {
       console.log(fname, lname, email, password);
-      fetch("http://localhost:5000/register", {
+      fetch("https://nuada.vercel.app/register", {
         method: "POST",
         crossDomain: true,
         headers: {
