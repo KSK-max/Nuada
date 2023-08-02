@@ -15,7 +15,6 @@ import { SimpleFooter } from "@/widgets/layout";
 import axios from "axios"; // Import axios
 
 export function Register() {
-  // State variables to store form data
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
