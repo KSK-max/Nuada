@@ -26,7 +26,6 @@ export function Register() {
   // Form submission handler
   const handleSubmit = (e) => {
     e.preventDefault();
-    
     if (userType === "Admin" && secretKey !== "Annal") {
       alert("Invalid Admin");
     } else {
