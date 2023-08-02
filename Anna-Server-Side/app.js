@@ -7,6 +7,17 @@ app.use(cors());
 const bcrypt = require("bcryptjs");
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
+app.use(cors(
+  {
+      origin: ["https://nuada.vercel.app"],
+      methods: ["POST", "GET"],
+      credentials: true
+  }
+));
+
+app.get("/", (req, res) => {
+  res.json("Hello");
+})
 
 const jwt = require("jsonwebtoken");
 var nodemailer = require("nodemailer");
