@@ -21,7 +21,7 @@ export function SignIn() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email, password);
-    fetch("https://nuada.vercel.app/login-user", {
+    fetch(`${import.meta.env.VITE_SERVER_BASE_URL}/login-user`, {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -59,7 +59,7 @@ export function SignIn() {
       />
       <div className="absolute inset-0 z-0 h-full w-full bg-black/50" />
       <div className="container mx-auto p-4">
-        <Card className="absolute top-2/4 left-2/4 w-full max-w-[24rem] -translate-y-2/4 -translate-x-2/4">
+        <Card className="absolute left-2/4 top-2/4 w-full max-w-[24rem] -translate-x-2/4 -translate-y-2/4">
           {/* CardHeader with Gradient Background */}
           <CardHeader
             variant="gradient"
