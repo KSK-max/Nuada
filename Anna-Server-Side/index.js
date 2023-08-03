@@ -90,7 +90,7 @@ const contactEmail = nodemailer.createTransport({
   },
 });
 
-app.get("/", (req, res) => {
+app.get("/contact", (req, res) => {
   res.json({ msg: 'This is CORS-enabled for a Single Route' });
 });
 
