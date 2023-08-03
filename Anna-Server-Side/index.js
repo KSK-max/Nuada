@@ -94,36 +94,36 @@ contactEmail.verify((error) => {
   }
 });
 
-app3.get("/", cors(), (req, res) =>{
-  alert("Hello World")
-})
+app3.get("/", cors(), (req, res) => {
+  res.json({msg: 'This is CORS-enabled for a Single Route'})
+  })
 
 app3.post("/contact", cors(), (req, res) => {
   const firstName = req.body.firstName;
-  const lastName = req.body.lastName;
-  const email = req.body.email;
-  const phoneNumber = req.body.phoneNumber;
-  const fraudType = req.body.fraudType;
-  const transferAmount = req.body.transferAmount;
-  const transferDate = req.body.transferDate;
-  const companyName = req.body.companyName;
-  const suspectReason = req.body.suspectReason;
-  const evidence = req.body.evidence;
-  //const message = req.body.message; 
-  const mail = {
-    from: email,
+    const lastName = req.body.lastName;
+    const email = req.body.email;
+    const phoneNumber = req.body.phoneNumber;
+    const fraudType = req.body.fraudType;
+    const transferAmount = req.body.transferAmount;
+    const transferDate = req.body.transferDate;
+    const companyName = req.body.companyName;
+    const suspectReason = req.body.suspectReason;
+    const evidence = req.body.evidence;
+    //const message = req.body.message; 
+    const mail = {
+      from: email,
     to: "alabraha@tcd.ie",
     subject: "Contact Form Submission",
     html: `<p>First Name: ${firstName}</p>
-           <p>Last Name: ${lastName}</p>
-           <p>Email: ${email}</p>
-           <p>phoneNumber: ${phoneNumber}</p>
-           <p>fraudType: ${fraudType}</p>
-           <p>transferAmount: ${transferAmount}</p>
-           <p>transferDate: ${transferDate}</p>
-           <p>companyName: ${companyName}</p>
-           <p>suspectReason: ${suspectReason}</p>
-           <p>Evidence: ${evidence}</p>`,
+    <p>Last Name: ${lastName}</p>
+    <p>Email: ${email}</p>
+    <p>phoneNumber: ${phoneNumber}</p>
+    <p>fraudType: ${fraudType}</p>
+    <p>transferAmount: ${transferAmount}</p>
+    <p>transferDate: ${transferDate}</p>
+    <p>companyName: ${companyName}</p>
+    <p>suspectReason: ${suspectReason}</p>
+    <p>Evidence: ${evidence}</p>`,
   };
   contactEmail.sendMail(mail, (error) => {
     if (error) {
