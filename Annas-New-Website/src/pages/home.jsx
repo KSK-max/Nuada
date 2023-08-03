@@ -39,7 +39,7 @@ export function Home() {
     };
 
     try {
-      const response = await fetch("https://nuada.vercel.app/contact", {
+      const response = await fetch("https://nuada.vercel.app:6001/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
