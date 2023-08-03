@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useState} from "react";
 import { Link } from "react-router-dom";
-import emailjs from "emailjs-com";
 
 import {
   Card,
@@ -19,20 +18,42 @@ import { featuresData, teamData, contactData } from "@/data";
 
 export function Home() {
   const form = useRef();
+  const [status, setStatus] = useState("Submit");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm('service_qc9gwqe', 'template_ke20ly5', form.current, 'o3yNSzqKn9c-3ys5q')
-      .then(
-        (result) => {
-          alert("Email sent successfully!");
-          form.current.reset();
+    setStatus("Sending...");
+
+    const { firstName, lastName, email, phoneNumber, fraudType, transferAmount, transferDate, companyName, suspectReason, evidence } = e.target.elements;
+    const formData = {
+      firstName: firstName.value,
+      lastName: lastName.value,
+      email: email.value,
+      phoneNumber: phoneNumber.value,
+      fraudType: fraudType.value,
+      transferAmount: transferAmount.value,
+      transferDate: transferDate.value,
+      companyName: companyName.value,
+      suspectReason: suspectReason.value,
+      evidence: evidence.value,
+    };
+
+    try {
+      const response = await fetch("http://localhost:6001/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        (error) => {
-          alert("Failed to send email. Please try again later.");
-        }
-      );
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      setStatus("Submit");
+      alert(result.status);
+    } catch (error) {
+      setStatus("Submit");
+      alert("Error Sending Message");
+    }
   };
 
   return (

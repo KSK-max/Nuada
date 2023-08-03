@@ -13,6 +13,7 @@
     "@material-tailwind/react": "^1.2.4",
     "@stripe/react-stripe-js": "^2.1.1",
     "@stripe/stripe-js": "^1.54.1",
+    "axios": "^1.4.0",
     "emailjs-com": "^3.2.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

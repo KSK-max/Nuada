@@ -12,7 +12,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { SimpleFooter } from "@/widgets/layout";
-import axios from 'redaxios'; // Import axios
+import axios from 'axios'; // Import axios
 
 export function Register() {
   const [fname, setFname] = useState("");
