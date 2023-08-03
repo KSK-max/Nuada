@@ -80,6 +80,7 @@ app3.use(cors({corsOptions}));
 app3.use(express.urlencoded({ extended: true }));
 
 
+// CORS middleware to allow requests from any origin
 app3.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*"); // You can restrict this to specific origins if needed.
   res.setHeader("Access-Control-Allow-Methods", "POST, GET");
@@ -88,6 +89,14 @@ app3.use((req, res, next) => {
   next();
 });
 
+// Handle OPTIONS requests for preflight
+app3.options("*", (req, res) => {
+  // Set the allowed methods, headers, and other relevant CORS headers
+  res.setHeader("Access-Control-Allow-Methods", "POST, GET");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.sendStatus(200); // Respond with a 200 status for preflight requests
+});
 
 
 app3.listen(6001, () => console.log("Email service running on port 6001"));
