@@ -95,7 +95,7 @@ contactEmail.verify((error) => {
   }
 });
 
-app3.post("/contact", (req, res) => {
+app3.post("/contact", cors(), (req, res) => {
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
   const email = req.body.email;
