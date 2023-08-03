@@ -39,7 +39,7 @@ export function Home() {
     };
 
     try {
-      const response = await fetch("http://localhost:6001/contact", {
+      const response = await fetch("https://nuada-dgcr5v7g8-ksk-max.vercel.app//contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
