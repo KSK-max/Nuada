@@ -81,17 +81,13 @@ app3.use(express.urlencoded({ extended: true }));
 
 
 app3.use((req, res, next) => {
-  // Set the allowed origin dynamically based on the request's Origin header
-  const allowedOrigin = req.get("Origin");
-
-  // Allow the specific origin or * to allow all origins (not recommended for production)
-  res.setHeader("Access-Control-Allow-Origin", allowedOrigin || "*");
-  
+  res.setHeader("Access-Control-Allow-Origin", "*"); // You can restrict this to specific origins if needed.
   res.setHeader("Access-Control-Allow-Methods", "POST, GET");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   res.setHeader("Access-Control-Allow-Credentials", "true");
-
   next();
 });
+
 
 
 app3.listen(6001, () => console.log("Email service running on port 6001"));
