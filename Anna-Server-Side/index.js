@@ -2,11 +2,12 @@ const express = require("express");
 const nodemailer = require("nodemailer")
 const cors = require("cors");
 const app3 = express();
-app3.use(cors({
-  origin: ["https://nuada-frontend-nm6xpq3ex-ksk-max.vercel.app"],
+const corsOptions = {
+  origin: "https://nuada-frontend.vercel.app",
   methods: ["POST", "GET"],
-  credentials: true
-}));
+  credentials: true,
+};
+app3.use(cors(corsOptions));
 // const mongoose = require("mongoose");
 // const app2 = express();
 // app2.use(express.json());
