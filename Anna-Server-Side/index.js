@@ -78,6 +78,22 @@ app3.use(cors({corsOptions}));
 
 
 app3.use(express.urlencoded({ extended: true }));
+
+
+app3.use((req, res, next) => {
+  // Set the allowed origin dynamically based on the request's Origin header
+  const allowedOrigin = req.get("Origin");
+
+  // Allow the specific origin or * to allow all origins (not recommended for production)
+  res.setHeader("Access-Control-Allow-Origin", allowedOrigin || "*");
+  
+  res.setHeader("Access-Control-Allow-Methods", "POST, GET");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+
+  next();
+});
+
+
 app3.listen(6001, () => console.log("Email service running on port 6001"));
 
 const contactEmail = nodemailer.createTransport({
