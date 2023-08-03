@@ -41,6 +41,7 @@ export function Home() {
     try {
       const response = await fetch("https://nuada-dgcr5v7g8-ksk-max.vercel.app/contact", {
         method: "POST",
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
