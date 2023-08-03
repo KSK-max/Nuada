@@ -73,7 +73,6 @@ app3.use(cors({
 // );
 
 
-// //app3.use("/", router);
 
 
 app3.use(express.urlencoded({ extended: true }));
@@ -94,6 +93,10 @@ contactEmail.verify((error) => {
     console.log("Ready to Send");
   }
 });
+
+app3.get("/", cors(), (req, res) =>{
+  alert("Hello World")
+})
 
 app3.post("/contact", cors(), (req, res) => {
   const firstName = req.body.firstName;
