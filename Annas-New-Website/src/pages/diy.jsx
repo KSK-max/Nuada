@@ -32,7 +32,7 @@ export function Diy() {
       ];
     
     useEffect(() => {
-      fetch("/config").then(async (r) => {
+      fetch("https://nuada.vercel.app/config").then(async (r) => {
         const { publishableKey } = await r.json();
         console.log(publishableKey);
         setStripePromise(loadStripe(publishableKey));

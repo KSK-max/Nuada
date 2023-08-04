@@ -29,7 +29,7 @@ export function Register() {
     } else {
       console.log(fname, lname, email, password);
       axios
-        .post(`${import.meta.env.VITE_SERVER_BASE_URL}/register`, {
+        .post(`https://nuada.vercel.app/register`, {
           fname,
           email,
           lname,

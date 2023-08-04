@@ -21,7 +21,7 @@ export function SignIn() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email, password);
-    fetch(`${import.meta.env.VITE_SERVER_BASE_URL}/login-user`, {
+    fetch(`https://nuada.vercel.app/login-user`, {
       method: "POST",
       crossDomain: true,
       headers: {
