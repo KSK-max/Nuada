@@ -50,16 +50,13 @@ export function Home() {
     };
 
     try {
-      const response = await fetch(
-        `${import.meta.env.VITE_SERVER_BASE_URL}/contact`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch(`https://nuada.vercel.app/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       const result = await response.json();
       setStatus("Submit");
