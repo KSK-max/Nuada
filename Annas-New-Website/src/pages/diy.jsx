@@ -40,7 +40,7 @@ export function Diy() {
     }, []);
   
     useEffect(() => {
-      fetch("/create-payment-intent", {
+      fetch("https://nuada.vercel.app/create-payment-intent", {
         method: "POST",
         body: JSON.stringify({}),
       }).then(async (result) => {
