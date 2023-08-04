@@ -14,7 +14,11 @@ require("./models/userDetails");
 require("./models/imageDetails");
 
 // CORS middleware to allow requests from any origin
-app.use(cors());
+app.use(
+	cors({
+		origin: "*",
+	})
+);
 
 // Body Parsing middleware
 app.use(express.json());
