@@ -12,7 +12,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { SimpleFooter } from "@/widgets/layout";
-import axios from 'axios'; // Import axios
+import axios from "axios"; // Import axios
 
 export function Register() {
   const [fname, setFname] = useState("");
@@ -29,7 +29,7 @@ export function Register() {
     } else {
       console.log(fname, lname, email, password);
       axios
-        .post("https://nuada.vercel.app/register", {
+        .post(`${import.meta.env.VITE_SERVER_BASE_URL}/register`, {
           fname,
           email,
           lname,
@@ -60,7 +60,7 @@ export function Register() {
       />
       <div className="absolute inset-0 z-0 h-full w-full bg-black/50" />
       <div className="container mx-auto p-4">
-        <Card className="absolute top-2/4 left-2/4 w-full max-w-[24rem] -translate-y-2/4 -translate-x-2/4">
+        <Card className="absolute left-2/4 top-2/4 w-full max-w-[24rem] -translate-x-2/4 -translate-y-2/4">
           {/* CardHeader with Gradient Background */}
           <CardHeader
             variant="gradient"
