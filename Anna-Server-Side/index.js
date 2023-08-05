@@ -43,11 +43,11 @@ const contactEmail = nodemailer.createTransport({
 	},
 });
 
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
 	res.json({ msg: "This is CORS-enabled for a Single Route" });
 });
 
-app.post("/api/contact", (req, res) => {
+app.post("/contact", (req, res) => {
 	const {
 		firstName,
 		lastName,
@@ -273,7 +273,7 @@ app.post("/reset-password/:id/:token", async (req, res) => {
 	}
 });
 
-app.get("/api/getAllUser", async (req, res) => {
+app.get("/getAllUser", async (req, res) => {
 	try {
 		const allUser = await User.find({});
 		res.send({ status: "ok", data: allUser });
