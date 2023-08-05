@@ -29,13 +29,16 @@ export function Register() {
     } else {
       console.log(fname, lname, email, password);
       axios
-        .post(`https://nuada.vercel.app/register`, {
-          fname,
-          email,
-          lname,
-          password,
-          userType,
-        })
+        .post(
+          `https://nuada-backend-test-cd8lfzxga-tutusbot.vercel.app/register`,
+          {
+            fname,
+            email,
+            lname,
+            password,
+            userType,
+          }
+        )
         .then((response) => {
           console.log(response.data, "userRegister");
           if (response.data.status === "ok") {
