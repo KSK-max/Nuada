@@ -337,5 +337,3 @@ app.get("/paginatedUsers", async (req, res) => {
 	results.result = allUser.slice(startIndex, lastIndex);
 	res.json(results);
 });
-
-export default app;
