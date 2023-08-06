@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 export function Navbar() {
   return (
-    <nav className="flex w-screen">
+    <nav className="flex w-full justify-between text-white">
       <div>
         <img src="" alt="logo" />
       </div>
-      <ul className="flex">
+      <ul className="flex gap-4">
         <li>
           <Link href="/home">Home</Link>
         </li>
