@@ -8,7 +8,7 @@ import {
 
 export function FeatureCard({ color, icon, title, description }) {
   return (
-    <Card className="rounded-2xl shadow-lg shadow-gray-500/10">
+    <Card className="rounded-2xl border-2 border-white shadow-lg shadow-gray-500/10 transition-colors hover:border-secondary-magenta">
       <CardBody className="px-8 text-center">
         <IconButton
           variant="gradient"
