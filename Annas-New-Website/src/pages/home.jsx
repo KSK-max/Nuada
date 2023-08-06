@@ -113,8 +113,7 @@ export function Home() {
               </div>
               <Typography
                 variant="h3"
-                className="mb-3 font-bold"
-                color="blue-gray"
+                className="mb-3 font-bold text-primary-blue"
               >
                 Working with us is a pleasure
               </Typography>
@@ -137,7 +136,12 @@ export function Home() {
                 or outsource are options available for individuals or
                 businesses.
               </Typography>
-              <Button variant="outlined">read more</Button>
+              <Button
+                variant="filled"
+                className="border-primary-blue bg-primary-blue"
+              >
+                read more
+              </Button>
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
               <Card className="shadow-lg shadow-gray-500/10">
@@ -151,8 +155,7 @@ export function Home() {
                 <CardBody>
                   <Typography
                     variant="h5"
-                    color="blue-gray"
-                    className="mb-3 font-bold"
+                    className="mb-3 font-bold text-primary-blue"
                   >
                     Top Notch Services
                   </Typography>
@@ -174,13 +177,15 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section className="relative bg-blue-gray-50/50 px-4 py-24">
+      <section className="relative bg-primary-blue px-4 py-8">
         <div className="container mx-auto">
           <PageTitle heading="How can Nuada help?">
-            Nuada offers a full suite of services to help maximize your chances
-            of recovery:
+            <span className="text-gray-200">
+              Nuada offers a full suite of services to help maximize your
+              chances of recovery:
+            </span>
           </PageTitle>
-          <div className="mx-auto mb-48 mt-20 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto my-20 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
             {contactData.map(({ title, icon, description }) => (
               <Card
                 key={title}
@@ -193,7 +198,11 @@ export function Home() {
                     className: "w-5 h-5",
                   })}
                 </div>
-                <Typography variant="h5" color="blue-gray" className="mb-2">
+                <Typography
+                  variant="h5"
+                  color="blue-gray"
+                  className="mb-2 text-white"
+                >
                   {title}
                 </Typography>
                 <Typography className="font-normal text-blue-gray-500">
@@ -204,13 +213,17 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section id="fraudSection" className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
+      <section id="fraudSection" className="mt-8 bg-gray-50 px-4 pb-20 pt-4">
         <PageTitle heading="Report a Fraud">
-          If you've been hit by fraud and need to speak to someone urgently,
-          call +353 1 442 92 00.
+          If you've been hit by fraud and need to speak to someone urgently,{" "}
+          <span className="text-secondary-magenta">call +353 1 442 92 00.</span>
         </PageTitle>
-        <div className="mx-auto max-w-md p-6">
-          <form ref={form} className="space-y-4" onSubmit={handleSubmit}>
+        <div className="mx-auto max-w-6xl p-6">
+          <form
+            ref={form}
+            className="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 2xl:gap-6"
+            onSubmit={handleSubmit}
+          >
             <div>
               <label
                 htmlFor="firstName"
@@ -384,7 +397,7 @@ export function Home() {
             <div>
               <button
                 type="submit"
-                className="rounded-md bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
+                className="rounded-md bg-primary-blue/90  px-8 py-2 text-xl font-semibold text-white hover:bg-primary-blue"
               >
                 Submit
               </button>
