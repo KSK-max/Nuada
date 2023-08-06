@@ -78,7 +78,8 @@ export function Home() {
               <Typography
                 variant="h1"
                 color="white"
-                className="mb-6 font-black"
+                className="mb-6 
+                font-black"
               >
                 Chargeback and payment dispute management.
               </Typography>
@@ -179,7 +180,10 @@ export function Home() {
       </section>
       <section className="relative bg-primary-blue px-4 py-8">
         <div className="container mx-auto">
-          <PageTitle heading="How can Nuada help?">
+          <PageTitle
+            heading="How can Nuada help?"
+            headingClassName={"text-white"}
+          >
             <span className="text-gray-200">
               Nuada offers a full suite of services to help maximize your
               chances of recovery:
