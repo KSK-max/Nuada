@@ -5,17 +5,17 @@ const year = new Date().getFullYear();
 
 export function Footer({ title, description, socials, menus, copyright }) {
   return (
-    <footer className="relative px-4 pt-8 pb-6">
+    <footer className="relative bg-primary-blue px-4 pb-6 pt-8">
       <div className="container mx-auto">
         <div className="flex flex-wrap pt-6 text-center lg:text-left">
           <div className="w-full px-4 lg:w-6/12">
-            <Typography variant="h4" className="mb-4" color="blue-gray">
+            <Typography variant="h4" className="mb-4 text-white">
               {title}
             </Typography>
-            <Typography className="font-normal text-blue-gray-500">
+            <Typography className="font-normal text-gray-100">
               {description}
             </Typography>
-            <div className="mx-auto mt-6 mb-8 flex justify-center gap-2 md:mb-0 lg:justify-start">
+            <div className="mx-auto mb-8 mt-6 flex justify-center gap-2 md:mb-0 lg:justify-start">
               {socials.map(({ color, name, path }) => (
                 <a
                   key={name}
@@ -37,8 +37,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
               <div key={name}>
                 <Typography
                   variant="small"
-                  color="blue-gray"
-                  className="mb-2 block font-medium uppercase"
+                  className="mb-2 block font-medium uppercase text-white"
                 >
                   {name}
                 </Typography>
@@ -51,7 +50,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
                         target="_blank"
                         rel="noreferrer"
                         variant="small"
-                        className="mb-2 block font-normal text-blue-gray-500 hover:text-blue-gray-700"
+                        className="mb-2 block font-normal text-gray-100 hover:text-gray-400"
                       >
                         {item.name}
                       </Typography>

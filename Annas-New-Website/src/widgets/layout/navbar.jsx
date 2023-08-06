@@ -29,7 +29,9 @@ export function Navbar({ brandName, routes, action }) {
   }, []);
 
   const handleBottomButtonClick = () => {
-    const formPosition = document.querySelector("#fraudSection").getBoundingClientRect().top;
+    const formPosition = document
+      .querySelector("#fraudSection")
+      .getBoundingClientRect().top;
     const yOffset = -100; // Adjust this value to scroll a bit above the top of the section
     const y = formPosition + window.pageYOffset + yOffset;
 
@@ -79,7 +81,7 @@ export function Navbar({ brandName, routes, action }) {
     <MTNavbar color="transparent" className="p-3">
       <div className="container mx-auto flex items-center justify-between text-white">
         <Link to="/">
-          <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold">
+          <Typography className="ml-2 mr-4 cursor-pointer py-1.5 font-bold">
             {brandName}
           </Typography>
         </Link>
@@ -87,10 +89,9 @@ export function Navbar({ brandName, routes, action }) {
         <div className="hidden lg:block">
           {/* Add the red button */}
           <Button
-            color="red"
             size="regular"
             onClick={handleBottomButtonClick}
-            className="ml-4"
+            className="ml-4 bg-secondary-magenta !shadow-secondary-magenta"
           >
             Report Fraud
           </Button>
@@ -102,14 +103,17 @@ export function Navbar({ brandName, routes, action }) {
           className="ml-auto text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
           onClick={() => setOpenNav(!openNav)}
         >
-          {openNav ? <XMarkIcon strokeWidth={2} className="h-6 w-6" /> : <Bars3Icon strokeWidth={2} className="h-6 w-6" />}
+          {openNav ? (
+            <XMarkIcon strokeWidth={2} className="h-6 w-6" />
+          ) : (
+            <Bars3Icon strokeWidth={2} className="h-6 w-6" />
+          )}
         </IconButton>
       </div>
       <MobileNav
-        className="rounded-xl bg-white px-4 pt-2 pb-4 text-blue-gray-900"
+        className="rounded-xl bg-white px-4 pb-4 pt-2 text-blue-gray-900"
         open={openNav}
-      >
-      </MobileNav>
+      ></MobileNav>
     </MTNavbar>
   );
 }
@@ -120,8 +124,7 @@ Navbar.defaultProps = {
     <a
       href="https://www.creative-tim.com/product/material-tailwind-kit-react"
       target="_blank"
-    >
-    </a>
+    ></a>
   ),
 };
 
