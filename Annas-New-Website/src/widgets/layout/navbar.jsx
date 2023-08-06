@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const navbar = () => {
+export function Navbar() {
   return (
     <nav className="flex w-screen">
       <div>
@@ -23,6 +23,6 @@ const navbar = () => {
       </ul>
     </nav>
   );
-};
+}
 
-export default navbar;
+export default Navbar;
