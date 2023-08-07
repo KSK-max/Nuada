@@ -67,14 +67,17 @@ export function Home() {
 
   return (
     <>
-      <div className="flex w-full items-center justify-center gap-2 bg-primary-blue px-2 py-4 text-white sm:gap-4">
-        <Typography variant="paragraph" className="!whitespace-nowrap">
+      <div className="flex w-full items-center justify-center gap-2 bg-primary-blue px-2 py-4 text-white sm:gap-3 md:gap-4">
+        <Typography
+          variant="paragraph"
+          className="!whitespace-nowrap !text-sm sm:text-base"
+        >
           Want to report a fraud or contact Nuada?{" "}
-          <span className="hidden sm:inline-block">We can help.</span>
+          <span className="hidden md:inline-block">We can help.</span>
         </Typography>
         <HashLink
           to="/#fraudSection"
-          className="rounded-md bg-secondary-magenta px-4 py-1 text-sm transition-colors hover:bg-primary-turquoise"
+          className="rounded-md bg-secondary-magenta px-2 py-1 text-sm transition-colors hover:bg-primary-turquoise sm:px-4"
         >
           Report a fraud
         </HashLink>
