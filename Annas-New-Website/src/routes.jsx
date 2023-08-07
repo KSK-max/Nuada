@@ -7,8 +7,8 @@ import {
   DocumentTextIcon,
 } from "@heroicons/react/24/solid";
 import Diy from "./pages/diy";
-import Business from "./pages/business";
-import Individual from "./pages/individual";
+import Business from "./pages/Business";
+import Individual from "./pages/Individual";
 import Success from "./pages/Success";
 
 export const routes = [
