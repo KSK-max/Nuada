@@ -9,6 +9,7 @@ import {
 import Diy from "./pages/diy";
 import Business from "./pages/business";
 import Individual from "./pages/individual";
+import Success from "./pages/Success";
 
 export const routes = [
   {
@@ -17,6 +18,7 @@ export const routes = [
     path: "/home",
     element: <Home />,
   },
+  { name: "success", path: "/success", element: <Success /> },
   {
     // icon: UserCircleIcon,
     name: "Soultions",
@@ -63,17 +65,17 @@ export const routes = [
   // },
   {
     // name:"Diy",
-    path:"/diy",
+    path: "/diy",
     element: <Diy />,
   },
   {
     // name:"Business",
-    path:"/business",
+    path: "/business",
     element: <Business />,
   },
   {
     // name:"Individual",
-    path:"/individual",
+    path: "/individual",
     element: <Individual />,
   },
 ];
