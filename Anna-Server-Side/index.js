@@ -96,6 +96,8 @@ app.get("/config", (req, res) => {
 
 // PAYMENT
 
+const productsList = await stripe.products.list();
+
 app.post("/create-payment-intent", async (req, res) => {
 	try {
 		const paymentIntent = await stripe.paymentIntents.create({
@@ -125,14 +127,14 @@ app.post("/create-checkout-session", async (req, res) => {
 			// For each item use the id to get it's information
 			// Take that information and convert it to Stripe's format
 			line_items: req.body.items.map(({ id, quantity }) => {
-				const storeItem = storeItems.get(id);
+				const product = productsList.get(id);
 				return {
 					price_data: {
 						currency: "usd",
 						product_data: {
-							name: storeItem.name,
+							name: product.name,
 						},
-						unit_amount: storeItem.priceInCents,
+						unit_amount: product.priceInCents,
 					},
 					quantity: quantity,
 				};
