@@ -125,7 +125,7 @@ app.post("/create-checkout-session", async (req, res) => {
 		success_url: `https://nuada-frontend.vercel.app`,
 		cancel_url: `https://nuada-frontend.vercel.app`,
 	};
-	return res.json(checkoutConfig);
+	return res.json(checkoutConfig, req.body);
 
 	try {
 		const session = await stripe.checkout.sessions.create(checkoutConfig);
