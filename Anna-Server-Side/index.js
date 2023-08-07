@@ -118,14 +118,17 @@ app.post("/create-payment-intent", async (req, res) => {
 });
 
 app.post("/create-checkout-session", async (req, res) => {
+	const checkoutConfig = {
+		payment_method_types: ["card"],
+		line_items: req.body,
+		mode: "payment",
+		success_url: `https://nuada-frontend.vercel.app`,
+		cancel_url: `https://nuada-frontend.vercel.app`,
+	};
+	return res.json(checkoutConfig);
+
 	try {
-		const session = await stripe.checkout.sessions.create({
-			payment_method_types: ["card"],
-			line_items: req.body,
-			mode: "payment",
-			success_url: `https://nuada-frontend.vercel.app`,
-			cancel_url: `https://nuada-frontend.vercel.app`,
-		});
+		const session = await stripe.checkout.sessions.create(checkoutConfig);
 
 		res.json({ url: session.url });
 	} catch (e) {
