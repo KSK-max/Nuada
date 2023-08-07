@@ -124,8 +124,8 @@ app.post("/create-checkout-session", async (req, res) => {
 		payment_method_types: ["card"],
 		line_items: body,
 		mode: "payment",
-		success_url: `https://nuada-frontend.vercel.app/success`,
-		cancel_url: `https://nuada-frontend.vercel.app`,
+		success_url: `https://wenuada.ie/#/success`,
+		cancel_url: `https://wenuada.ie`,
 	};
 
 	try {
