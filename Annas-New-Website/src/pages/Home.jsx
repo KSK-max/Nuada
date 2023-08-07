@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 import {
   Card,
@@ -71,12 +72,12 @@ export function Home() {
           Want to report a fraud or contact Nuada?{" "}
           <span className="hidden sm:inline-block">We can help.</span>
         </Typography>
-        <a
-          href="#fraudSection"
+        <HashLink
+          to="/#fraudSection"
           className="rounded-md bg-secondary-magenta px-4 py-1 text-sm transition-colors hover:bg-primary-turquoise"
         >
           Report a fraud
-        </a>
+        </HashLink>
       </div>
       <div className="relative flex h-screen content-center items-center justify-center pb-32 pt-16">
         <div className="absolute top-0 h-full w-full bg-[url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')] bg-cover bg-center" />

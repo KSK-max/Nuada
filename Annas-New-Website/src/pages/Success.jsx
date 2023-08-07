@@ -8,7 +8,7 @@ function Success() {
     <>
       <div className="flex min-h-[60vh] w-full flex-col items-center justify-center gap-8">
         <Typography variant="h1">Payment successful!</Typography>
-        <Link to="/home">
+        <Link to="/">
           <Button color="blue" className="bg-primary-blue text-2xl">
             Home
           </Button>
