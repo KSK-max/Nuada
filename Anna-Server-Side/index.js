@@ -119,9 +119,7 @@ app.post("/create-payment-intent", async (req, res) => {
 
 app.post("/create-checkout-session", async (req, res) => {
 	try {
-		// Create a checkout session with Stripe
 		console.log(req.body);
-		return res.json(req.body);
 		const session = await stripe.checkout.sessions.create({
 			payment_method_types: ["card"],
 			// For each item use the id to get it's information
