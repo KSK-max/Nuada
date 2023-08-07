@@ -35,27 +35,24 @@ export function Home() {
       companyName,
       suspectReason,
       evidence,
-    } = e.target.elements;
-    const formData = {
-      firstName: firstName.value,
-      lastName: lastName.value,
-      email: email.value,
-      phoneNumber: phoneNumber.value,
-      fraudType: fraudType.value,
-      transferAmount: transferAmount.value,
-      transferDate: transferDate.value,
-      companyName: companyName.value,
-      suspectReason: suspectReason.value,
-      evidence: evidence.value,
-    };
+    } = e.target;
+
+    const formData = new FormData();
+    formData.append("firstName", firstName.value);
+    formData.append("lastName", lastName.value);
+    formData.append("email", email.value);
+    formData.append("phoneNumber", phoneNumber.value);
+    formData.append("fraudType", fraudType.value);
+    formData.append("transferAmount", transferAmount.value);
+    formData.append("transferDate", transferDate.value);
+    formData.append("companyName", companyName.value);
+    formData.append("suspectReason", suspectReason.value);
+    formData.append("evidence", evidence.files[0]);
 
     try {
       const response = await fetch(`https://nuada.vercel.app/contact`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        body: formData,
       });
 
       const result = await response.json();
