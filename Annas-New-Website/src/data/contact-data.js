@@ -6,19 +6,19 @@ import {
 
 export const contactData = [
   {
-    title: "Team of fraud recovery experts",
+    title: "Fraud Recovery Experts",
     icon: StarIcon,
     // description:
     //   "Some quick example text to build on the card title and make up the bulk of the card's content.",
   },
   {
-    title: "Expedited bank account freezing",
+    title: "Expert Guidance",
     icon: PresentationChartLineIcon,
     // description:
     //   "Some quick example text to build on the card title and make up the bulk of the card's content.",
   },
   {
-    title: "Federal law enforcement engagement",
+    title: "Dispute Management",
     icon: RocketLaunchIcon,
     // description:
     //   "Some quick example text to build on the card title and make up the bulk of the card's content.",

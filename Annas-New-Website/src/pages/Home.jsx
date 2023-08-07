@@ -160,7 +160,7 @@ export function Home() {
                 read more
               </Button>
             </div>
-            <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
+            {/* <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
               <Card className="shadow-lg shadow-gray-500/10">
                 <CardHeader className="relative h-56">
                   <img
@@ -190,7 +190,7 @@ export function Home() {
                   </Typography>
                 </CardBody>
               </Card>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
