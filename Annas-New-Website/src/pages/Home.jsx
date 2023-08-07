@@ -71,7 +71,7 @@ export function Home() {
     <>
       <div className="flex w-full items-center justify-center gap-2 bg-primary-blue px-2 py-4 text-white sm:gap-4">
         <Typography variant="paragraph" className="!whitespace-nowrap">
-          Got hit by a wire fraud?{" "}
+          Want to report a fraud or contact Nuada?{" "}
           <span className="hidden sm:inline-block">We can help.</span>
         </Typography>
         <a

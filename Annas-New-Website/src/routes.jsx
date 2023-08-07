@@ -35,24 +35,18 @@ export const routes = [
     path: "/profile",
     element: <Profile />,
   },
-  {
-    // icon: UserCircleIcon,
-    name: "Contact Nuada",
-    path: "/profile",
-    element: <Profile />,
-  },
-  {
-    icon: ArrowRightOnRectangleIcon,
-    name: "Sign In",
-    path: "/sign-in",
-    element: <SignIn />,
-  },
-  {
-    icon: UserPlusIcon,
-    name: "Register",
-    path: "/register",
-    element: <Register />,
-  },
+  // {
+  //   icon: ArrowRightOnRectangleIcon,
+  //   name: "Sign In",
+  //   path: "/sign-in",
+  //   element: <SignIn />,
+  // },
+  // {
+  //   icon: UserPlusIcon,
+  //   name: "Register",
+  //   path: "/register",
+  //   element: <Register />,
+  // },
 
   // {
   //   icon: UserPlusIcon,
