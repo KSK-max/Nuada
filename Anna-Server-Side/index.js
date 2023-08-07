@@ -96,8 +96,6 @@ app.get("/config", (req, res) => {
 
 // PAYMENT
 
-const productsList = await stripe.products.list();
-
 app.post("/create-payment-intent", async (req, res) => {
 	try {
 		const paymentIntent = await stripe.paymentIntents.create({
@@ -121,6 +119,7 @@ app.post("/create-payment-intent", async (req, res) => {
 
 app.post("/create-checkout-session", async (req, res) => {
 	try {
+		const productsList = await stripe.products.list();
 		console.log(req.body);
 		const session = await stripe.checkout.sessions.create({
 			payment_method_types: ["card"],
