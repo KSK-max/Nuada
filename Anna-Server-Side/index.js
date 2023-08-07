@@ -94,6 +94,8 @@ app.get("/config", (req, res) => {
 	});
 });
 
+// PAYMENT
+
 app.post("/create-payment-intent", async (req, res) => {
 	try {
 		const paymentIntent = await stripe.paymentIntents.create({
@@ -112,6 +114,43 @@ app.post("/create-payment-intent", async (req, res) => {
 				message: e.message,
 			},
 		});
+	}
+});
+
+app.post("/create-checkout-session", async (req, res) => {
+	try {
+		// Create a checkout session with Stripe
+		console.log(req.body);
+		return res.json(req.body);
+		const session = await stripe.checkout.sessions.create({
+			payment_method_types: ["card"],
+			// For each item use the id to get it's information
+			// Take that information and convert it to Stripe's format
+			line_items: req.body.items.map(({ id, quantity }) => {
+				const storeItem = storeItems.get(id);
+				return {
+					price_data: {
+						currency: "usd",
+						product_data: {
+							name: storeItem.name,
+						},
+						unit_amount: storeItem.priceInCents,
+					},
+					quantity: quantity,
+				};
+			}),
+			mode: "payment",
+			// Set a success and cancel URL we will send customers to
+			// These must be full URLs
+			// In the next section we will setup CLIENT_URL
+			success_url: `https://nuada-frontend.vercel.app`,
+			cancel_url: `https://nuada-frontend.vercel.app`,
+		});
+
+		res.json({ url: session.url });
+	} catch (e) {
+		// If there is an error send it to the client
+		res.status(500).json({ error: e.message });
 	}
 });
 
