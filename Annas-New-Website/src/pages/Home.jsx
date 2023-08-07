@@ -69,6 +69,18 @@ export function Home() {
 
   return (
     <>
+      <div className="flex w-full items-center justify-center gap-2 bg-primary-blue px-2 py-4 text-white sm:gap-4">
+        <Typography variant="paragraph" className="!whitespace-nowrap">
+          Want to report a fraud or contact Nuada?{" "}
+          <span className="hidden sm:inline-block">We can help.</span>
+        </Typography>
+        <a
+          href="#fraudSection"
+          className="rounded-md bg-secondary-magenta px-4 py-1 text-sm transition-colors hover:bg-primary-turquoise"
+        >
+          Report a fraud
+        </a>
+      </div>
       <div className="relative flex h-screen content-center items-center justify-center pb-32 pt-16">
         <div className="absolute top-0 h-full w-full bg-[url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')] bg-cover bg-center" />
         <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
@@ -90,7 +102,10 @@ export function Home() {
           </div>
         </div>
       </div>
-      <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
+      <section
+        className="-mt-32 bg-gray-50 px-4 pb-20 pt-4"
+        id="solutionSection"
+      >
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuresData.map(({ color, title, icon, description, route }) => (
@@ -178,7 +193,7 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section className="relative bg-primary-blue px-4 py-8">
+      <section className="relative bg-primary-blue px-4 py-8" id="aboutSection">
         <div className="container mx-auto">
           <PageTitle
             heading="How can Nuada help?"
@@ -398,10 +413,10 @@ export function Home() {
               />
             </div>
 
-            <div>
+            <div className="place-self-end lg:col-span-2">
               <button
                 type="submit"
-                className="rounded-md bg-primary-blue/90  px-8 py-2 text-xl font-semibold text-white hover:bg-primary-blue"
+                className="rounded-md  bg-primary-blue/90 px-8 py-2 text-xl font-semibold text-white hover:bg-primary-blue"
               >
                 Submit
               </button>
