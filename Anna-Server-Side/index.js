@@ -123,6 +123,11 @@ app.post("/create-checkout-session", async (req, res) => {
 		const items = productsList.data.filter((product) => {
 			req.body.id === product.id;
 		});
+		return res.send({
+			line_items: items.map((item) => {
+				return { price: item.default_price, quantity: 1 };
+			}),
+		});
 		const session = await stripe.checkout.sessions.create({
 			payment_method_types: ["card"],
 			// For each item use the id to get it's information
