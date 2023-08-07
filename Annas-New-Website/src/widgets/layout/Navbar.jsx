@@ -38,7 +38,7 @@ export function Navbar() {
         <ul
           className={`${
             open ? "flex" : "hidden"
-          } absolute -left-8 top-[100%] z-40 flex w-screen flex-col items-end gap-8 border-t-[1px] border-secondary-gray bg-white px-2 py-4 uppercase md:hidden md:flex-row`}
+          } absolute -left-8 top-[100%] z-40 flex w-screen flex-col items-end gap-8 border-t-[1px] border-secondary-gray bg-white px-8 py-4 uppercase md:hidden md:flex-row`}
         >
           <li className=" transition-colors hover:text-primary-turquoise">
             <HashLink to="/">Home</HashLink>
