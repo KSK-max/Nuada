@@ -57,9 +57,7 @@ export function Diy() {
   const handlePayment = () => {
     fetch("https://nuada.vercel.app/create-checkout-session", {
       method: "POST",
-      body: JSON.stringify({
-        items: [{ price: "price_1NcSqdLcCMKnXur8abpFaQmZ", quantity: 1 }],
-      }),
+      body: '{"items": [{"price": "price_1NcSqdLcCMKnXur8abpFaQmZ", "quantity": "1"}]}',
     });
   };
 

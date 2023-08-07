@@ -119,10 +119,9 @@ app.post("/create-payment-intent", async (req, res) => {
 
 app.post("/create-checkout-session", async (req, res) => {
 	try {
-		const items = req.body.items;
 		const session = await stripe.checkout.sessions.create({
 			payment_method_types: ["card"],
-			line_items: items,
+			line_items: req.body,
 			mode: "payment",
 			success_url: `https://nuada-frontend.vercel.app`,
 			cancel_url: `https://nuada-frontend.vercel.app`,
