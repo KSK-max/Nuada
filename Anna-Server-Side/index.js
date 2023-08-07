@@ -9,6 +9,8 @@ require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY, {
 	apiVersion: "2022-08-01",
 });
+const multer = require("multer");
+const upload = multer();
 
 require("./models/userDetails");
 require("./models/imageDetails");
@@ -47,7 +49,7 @@ app.get("/", (req, res) => {
 	res.json({ msg: "This is CORS-enabled for a Single Route" });
 });
 
-app.post("/contact", (req, res) => {
+app.post("/contact", upload.single("evidence"), (req, res) => {
 	const {
 		firstName,
 		lastName,
@@ -58,8 +60,8 @@ app.post("/contact", (req, res) => {
 		transferDate,
 		companyName,
 		suspectReason,
-		evidence,
 	} = req.body;
+	// const evidenceBuffer = Buffer.from(evidence, "base64");
 
 	const mail = {
 		from: email,
@@ -73,8 +75,13 @@ app.post("/contact", (req, res) => {
            <p>Transfer Amount: ${transferAmount}</p>
            <p>Transfer Date: ${transferDate}</p>
            <p>Company Name: ${companyName}</p>
-           <p>Suspect Reason: ${suspectReason}</p>
-           <p>Evidence: ${evidence}</p>`,
+           <p>Suspect Reason: ${suspectReason}</p>`,
+		attachments: [
+			{
+				filename: "evidence.png",
+				content: req.file.buffer,
+			},
+		],
 	};
 
 	contactEmail.sendMail(mail, (error) => {
