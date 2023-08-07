@@ -17,6 +17,7 @@ import {
   Tab,
   TabPanel,
 } from "@material-tailwind/react";
+import handlePayment from "@/lib/handlePayment";
 
 export function Diy() {
   const [stripePromise, setStripePromise] = useState(null);
@@ -54,24 +55,6 @@ export function Diy() {
   //       setClientSecret(clientSecret);
   //     });
   //   }, []);
-  const handlePayment = async () => {
-    try {
-      const req = await fetch(
-        "https://nuada.vercel.app/create-checkout-session",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify([
-            { price: "price_1NcSqdLcCMKnXur8abpFaQmZ", quantity: 1 },
-          ]),
-        }
-      );
-      const res = await req.json();
-      window.location.replace(res.url);
-    } catch (err) {
-      console.error(err);
-    }
-  };
 
   return (
     <>
@@ -114,7 +97,14 @@ export function Diy() {
                       of a new month.
                     </Typography>
                     <div className="flex justify-center">
-                      <Button onClick={handlePayment}>Pay</Button>
+                      <Button
+                        onClick={() =>
+                          handlePayment("price_1NcSqdLcCMKnXur8abpFaQmZ")
+                        }
+                        className="bg-primary-blue text-lg"
+                      >
+                        Pay
+                      </Button>
                     </div>
                   </div>
                 </div>
