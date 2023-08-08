@@ -262,7 +262,7 @@ export function Home() {
                 type="tel"
                 id="phoneNumber"
                 name="phoneNumber"
-                pattern="[0-9]{13}"
+                pattern="[0-9]{12}"
                 placeholder="e.g. 353877228332"
                 className="mt-1 w-full rounded-md border p-2"
                 required
