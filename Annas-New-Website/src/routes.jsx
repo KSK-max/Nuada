@@ -10,6 +10,8 @@ import Diy from "./pages/diy";
 import Business from "./pages/Business";
 import Individual from "./pages/Individual";
 import Success from "./pages/Success";
+import Resources from "./pages/Resources";
+import Resource from "./pages/Resource";
 
 export const routes = [
   {
@@ -28,8 +30,13 @@ export const routes = [
   {
     // icon: UserCircleIcon,
     name: "Resources",
-    path: "/profile",
-    element: <Profile />,
+    path: "/resources",
+    element: <Resources />,
+  },
+  {
+    name: "Resource",
+    path: "/resource",
+    element: <Resource />,
   },
   {
     // icon: UserCircleIcon,
