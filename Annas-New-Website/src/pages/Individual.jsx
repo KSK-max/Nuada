@@ -50,7 +50,7 @@ export function Individual() {
                         variant="filled"
                         className="bg-primary-blue"
                         onClick={() =>
-                          handlePayment("price_1NcWi1LcCMKnXur8Qgu0t6zi")
+                          handlePayment("price_1NctqfEqdJXeTzZ3tWiMQkQL")
                         }
                       >
                         Pay
