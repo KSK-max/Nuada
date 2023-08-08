@@ -103,12 +103,10 @@ export function Home() {
           </div>
         </div>
       </div>
-      <section
-        className="-mt-32 bg-gray-50 px-4 pb-20 pt-4"
-        id="solutionSection"
-      >
+      <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="relative grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="absolute -top-[150%]" id="solutionSection"></div>
             {featuresData.map(({ color, title, icon, description, route }) => (
               <Link to={route} key={title}>
                 <FeatureCard
@@ -123,25 +121,23 @@ export function Home() {
               </Link>
             ))}
           </div>
-          <div className="mt-32 flex flex-wrap items-center">
-            <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-white p-3 text-center shadow-lg">
-                <UsersIcon className="h-6 w-6 text-blue-gray-900" />
-              </div>
+          <div className="relative mt-32 flex flex-wrap items-center">
+            <div className="absolute -top-20" id="aboutSection"></div>
+            <div className="mx-auto -mt-8 w-full px-4 pt-8">
               <Typography
                 variant="h3"
-                className="mb-3 font-bold text-primary-blue"
+                className="mb-12 font-bold text-primary-blue"
               >
-                Working with us is a pleasure
+                About us
               </Typography>
-              <Typography className="mb-8 font-normal text-blue-gray-500">
+              <Typography className="mb-4 text-lg" variant="paragraph">
                 Nuada is a payment dispute management company based in Ireland.
                 Core Nuada values are impartiality and objectivity, which draws
                 back emotions from facts and result in liability for the parties
                 involved. Nuada unpuzzles and leads cases for victims of fraud
                 or chargeback appliers.
-                <br />
-                <br />
+              </Typography>
+              <Typography variant="paragraph" className="text-lg">
                 For businesses - Nuada provides effective chargeback management
                 in compliance with card brand rules. Nuada solves complex cases
                 and gives a peace of mind. Nuada's clients are companies that
@@ -153,48 +149,11 @@ export function Home() {
                 or outsource are options available for individuals or
                 businesses.
               </Typography>
-              <Button
-                variant="filled"
-                className="border-primary-blue bg-primary-blue"
-              >
-                read more
-              </Button>
             </div>
-            {/* <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
-              <Card className="shadow-lg shadow-gray-500/10">
-                <CardHeader className="relative h-56">
-                  <img
-                    alt="Card Image"
-                    src="/img/teamwork.jpeg"
-                    className="h-full w-full"
-                  />
-                </CardHeader>
-                <CardBody>
-                  <Typography
-                    variant="h5"
-                    className="mb-3 font-bold text-primary-blue"
-                  >
-                    Top Notch Services
-                  </Typography>
-                  <Typography className="font-normal text-blue-gray-500">
-                    Nuada has a top-notch approach to each case. Having a unique
-                    experience from the bottom to the top, Nuada knows exactly
-                    what's happening in each particular case, avoiding
-                    robotization, and lighting a torch to straighten the
-                    processes and make things work resolving the case, and
-                    bringing it to its logical conclusion. Saving revenue for
-                    companies or standing with consumers in the bureaucracy
-                    field, Nuada is a reliable partner you can trust. Talk to us
-                    by scheduling a call. "Talk to us can be a link leading to
-                    "Contact us" form
-                  </Typography>
-                </CardBody>
-              </Card>
-            </div> */}
           </div>
         </div>
       </section>
-      <section className="relative bg-primary-blue px-4 py-8" id="aboutSection">
+      <section className="relative bg-primary-blue px-4 py-8">
         <div className="container mx-auto">
           <PageTitle
             heading="How can Nuada help?"
