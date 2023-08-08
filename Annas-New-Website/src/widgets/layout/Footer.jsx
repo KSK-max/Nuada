@@ -64,10 +64,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
         <hr className="my-6 border-gray-300" />
         <div className="flex flex-wrap items-center justify-center md:justify-between">
           <div className="mx-auto w-full px-4 text-center">
-            <Typography
-              variant="small"
-              className="font-normal text-blue-gray-500"
-            >
+            <Typography variant="small" className="font-normal text-white">
               {copyright}
             </Typography>
           </div>
