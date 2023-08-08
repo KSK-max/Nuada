@@ -40,7 +40,7 @@ mongoose
 const contactEmail = nodemailer.createTransport({
 	service: "gmail",
 	auth: {
-		user: "alanandvivo@gmail.com",
+		user: "help@wenuada.ie",
 		pass: "hbhjhfdrxziriuui",
 	},
 });
@@ -65,7 +65,7 @@ app.post("/contact", upload.single("evidence"), (req, res) => {
 
 	const mail = {
 		from: email,
-		to: "koushiks2000@gmail.com",
+		to: "help@wenuada.ie",
 		subject: "Contact Form Submission",
 		html: `<p>First Name: ${firstName}</p>
            <p>Last Name: ${lastName}</p>
