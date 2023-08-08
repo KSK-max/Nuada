@@ -46,7 +46,7 @@ export function Business() {
                         variant="filled"
                         className="bg-primary-blue text-lg"
                         onClick={() =>
-                          handlePayment("price_1NcWh4LcCMKnXur8JsccESxu")
+                          handlePayment("price_1NctpTEqdJXeTzZ31O03QqlA")
                         }
                       >
                         Pay
