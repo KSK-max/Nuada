@@ -99,7 +99,7 @@ export function Diy() {
                     <div className="flex justify-center">
                       <Button
                         onClick={() =>
-                          handlePayment("price_1NcpYPLcCMKnXur8s5CKf2dP")
+                          handlePayment("price_1NctazEqdJXeTzZ3gHdsAruc")
                         }
                         className="bg-primary-blue text-lg"
                       >
