@@ -303,8 +303,8 @@ export function Home() {
                 type="tel"
                 id="phoneNumber"
                 name="phoneNumber"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                placeholder="e.g. 555-555-5555"
+                pattern="[0-9]{13}"
+                placeholder="e.g. 353877228332"
                 className="mt-1 w-full rounded-md border p-2"
                 required
               />
