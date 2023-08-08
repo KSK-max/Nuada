@@ -40,7 +40,7 @@ mongoose
 const contactEmail = nodemailer.createTransport({
 	service: "gmail",
 	auth: {
-		user: "help@wenuada.ie",
+		user: "alanandvivo@gmail.com",
 		pass: "hbhjhfdrxziriuui",
 	},
 });
