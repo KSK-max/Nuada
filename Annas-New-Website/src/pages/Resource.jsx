@@ -36,7 +36,7 @@ function Resource() {
   );
   return (
     <>
-      <div className="flex min-h-[60vh] flex-col gap-8 px-8 py-20">
+      <div className="container mx-auto flex min-h-[60vh] flex-col gap-8 px-8 py-20">
         <Typography variant="h2">{title}</Typography>
         <div className="h-[2px] w-full bg-primary-blue"></div>
         <Typography variant="paragraph">{description}</Typography>
