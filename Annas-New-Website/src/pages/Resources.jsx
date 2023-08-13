@@ -13,6 +13,7 @@ function Resources() {
             key={resource.title}
           >
             <ArticleCard
+              link={resource.link}
               title={resource.title}
               description={resource.description}
             />
