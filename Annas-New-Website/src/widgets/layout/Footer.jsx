@@ -7,7 +7,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
   return (
     <footer className="relative bg-primary-blue px-4 pb-6 pt-8">
       <div className="container mx-auto">
-        <div className="flex flex-wrap pt-6 text-center lg:text-left">
+        <div className="flex flex-col pt-6 text-center md:flex-row lg:text-left">
           <div className="w-full px-4 lg:w-6/12">
             <Typography variant="h4" className="mb-4 text-white">
               {title}
@@ -32,82 +32,36 @@ export function Footer({ title, description, socials, menus, copyright }) {
               ))}
             </div>
           </div>
-          <div className="mx-auto mt-12 grid w-max grid-cols-2 gap-24 lg:mt-0">
-            {menus.map(({ name, items }) => (
-              <div key={name}>
-                <Typography
-                  variant="small"
-                  className="mb-2 block font-medium uppercase text-white"
-                >
-                  {name}
-                </Typography>
-                <ul className="mt-3">
-                  {items.map((item) => (
-                    <li key={item.name}>
-                      <Typography
-                        as="a"
-                        href={item.path}
-                        target="_blank"
-                        rel="noreferrer"
-                        variant="small"
-                        className="mb-2 block font-normal text-gray-100 hover:text-gray-400"
-                      >
-                        {item.name}
-                      </Typography>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="mx-auto mt-12 flex w-full items-center justify-center lg:mt-0">
+            <div className="rounded-2xl bg-white">
+              <img src="/img/logo-big.png" alt="logo" />
+            </div>
           </div>
         </div>
         <hr className="my-6 border-gray-300" />
-        <div className="flex flex-wrap items-center justify-center md:justify-between">
-          <div className="mx-auto w-full px-4 text-center">
-            <Typography variant="small" className="font-normal text-white">
-              {copyright}
-            </Typography>
-          </div>
-        </div>
       </div>
     </footer>
   );
 }
 
 Footer.defaultProps = {
-  title: "Material Tailwind",
-  description:
-    "Easy to use React components for Tailwind CSS and Material Design.",
+  title: "Nuada",
+  description: "Chargeback and payment dispute management.",
   socials: [
     {
       color: "blue",
       name: "facebook",
-      path: "https://www.facebook.com/CreativeTim",
-    },
-    {
-      color: "light-blue",
-      name: "twitter",
-      path: "https://www.twitter.com/creativetim",
-    },
-    {
-      color: "purple",
-      name: "instagram",
-      path: "https://www.instagram.com/creativetimofficial/",
-    },
-    {
-      color: "pink",
-      name: "dribbble",
-      path: "https://www.dribbble.com/creativetim",
+      path: "https://www.facebook.com/profile.php?id=100064111299963",
     },
     {
       color: "red",
       name: "youtube",
-      path: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
+      path: "https://youtube.com/@WeNuada",
     },
     {
-      color: "black",
-      name: "github",
-      path: "https://github.com/creativetimofficial/material-tailwind",
+      color: "blue",
+      name: "linkedin",
+      path: "https://www.linkedin.com/in/annapeschanska/",
     },
   ],
   menus: [
@@ -148,19 +102,6 @@ Footer.defaultProps = {
       ],
     },
   ],
-  copyright: (
-    <>
-      Copyright © {year} Material Tailwind by{" "}
-      <a
-        href="https://www.creative-tim.com?ref=mtk"
-        target="_blank"
-        className="text-blue-gray-500 transition-colors hover:text-blue-500"
-      >
-        Creative Tim
-      </a>
-      .
-    </>
-  ),
 };
 
 Footer.propTypes = {

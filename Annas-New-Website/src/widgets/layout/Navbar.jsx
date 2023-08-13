@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { HashLink } from "react-router-hash-link";
-import { Link } from "react-router-dom";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -41,16 +40,24 @@ export function Navbar() {
           } absolute -left-8 top-[100%] z-40 flex w-screen flex-col items-end gap-8 border-t-[1px] border-secondary-gray bg-white px-8 py-4 uppercase md:hidden md:flex-row`}
         >
           <li className=" transition-colors hover:text-primary-turquoise">
-            <HashLink to="/">Home</HashLink>
+            <HashLink to="/" onClick={() => setOpen(false)}>
+              Home
+            </HashLink>
           </li>
           <li className="transition-colors hover:text-primary-turquoise">
-            <HashLink to="/#solutionSection">Solutions</HashLink>
+            <HashLink to="/#solutionSection" onClick={() => setOpen(false)}>
+              Solutions
+            </HashLink>
           </li>
           <li className="transition-colors hover:text-primary-turquoise">
-            <HashLink to="/resources">Resources</HashLink>
+            <HashLink to="/resources" onClick={() => setOpen(false)}>
+              Resources
+            </HashLink>
           </li>
           <li className="transition-colors hover:text-primary-turquoise">
-            <HashLink to="/#aboutSection">About us</HashLink>
+            <HashLink to="/#aboutSection" onClick={() => setOpen(false)}>
+              About us
+            </HashLink>
           </li>
         </ul>
       </div>
