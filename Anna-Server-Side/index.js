@@ -65,7 +65,7 @@ app.post("/contact", upload.single("evidence"), (req, res) => {
 
 	const mail = {
 		from: email,
-		to: "help@wenuada.ie",
+		to: "wenuada@gmail.com",
 		subject: "Contact Form Submission",
 		html: `<p>First Name: ${firstName}</p>
            <p>Last Name: ${lastName}</p>
