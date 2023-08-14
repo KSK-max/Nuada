@@ -20,7 +20,9 @@ function Resource() {
             Consumers
           </a>{" "}
           also have obligations towards banks, which include: Providing Accurate
-          Information: Consumers must provide accurate and complete information
+          Information: 
+          
+          Consumers must provide accurate and complete information
           when applying for a bank account or financial product, such as their
           name, address, and financial information. Complying with Terms and
           Conditions: Consumers must comply with the terms and conditions of
