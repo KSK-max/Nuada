@@ -61,7 +61,7 @@ Footer.defaultProps = {
     {
       color: "blue",
       name: "linkedin",
-      path: "https://www.linkedin.com/in/annapeschanska/",
+      path: "https://www.linkedin.com/company/nuada-management/",
     },
   ],
   menus: [
