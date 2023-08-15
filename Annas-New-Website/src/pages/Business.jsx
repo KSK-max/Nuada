@@ -21,7 +21,7 @@ export function Business() {
 
               <div className="my-8 text-center">
                 <Typography variant="h2" color="blue-gray" className="mb-2">
-                  Business Onboard
+                  Business On Board
                 </Typography>
               </div>
 
@@ -46,12 +46,13 @@ export function Business() {
                       <br /><br />
                       When working with Nuada your business gets:
                       <br /><br />
-                      <ul>
-                        <li><strong>Representment letters.</strong></li>
-                        <li><strong>Chargeback mitigation plan.</strong></li>
-                        <li><strong>Chargeback ratio report.</strong></li>
-                        <li><strong>Dispute Risk Assessment.</strong></li>
-                      </ul>
+                      Representment letters.
+                      <br />
+                      Chargeback mitigation plan.
+                      <br />
+                      Chargeback ratio report.
+                      <br />
+                      Dispute Risk Assessment.
                     </Typography>
                     <div className="flex justify-center">
                       <Button
@@ -62,7 +63,7 @@ export function Business() {
                           handlePayment("price_1NctpTEqdJXeTzZ31O03QqlA")
                         }
                       >
-                        Buy
+                        Pay
                       </Button>
                     </div>
                   </div>
