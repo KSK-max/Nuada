@@ -12,7 +12,7 @@ export function Individual() {
       <section className="relative bg-blue-gray-50/50 px-4 py-16">
         <div className="relative -mt-64 mb-6 flex w-full min-w-0 flex-col break-words rounded-3xl bg-white shadow-xl shadow-gray-500/5">
           <div className="px-6">
-            <div className="flex flex-wrap justify-center">
+            <div className="flex flex-col flex-wrap justify-center">
               <div className="flex w-full justify-center px-4 lg:order-2 lg:w-3/12">
                 <div className="relative">
                   <div className="-mt-20 w-40"></div>
@@ -30,23 +30,26 @@ export function Individual() {
                   <div className="flex w-full flex-col items-center px-4 lg:w-9/12">
                     <Typography className="mb-8 font-bold text-black">
                       Our team provides personalised assessment and roadmap.
-                      <br /><br />
-                      There are a maximum of 3 Stages in Alternative Dispute Resolution,
-              
-                      Nuada can take Your case through. 
                       <br />
-                      Every case starts with 1st Stage, depending on
-                      the result – you decide to proceed or not.
-                      <br /><br />
+                      <br />
+                      There are a maximum of 3 Stages in Alternative Dispute
+                      Resolution, Nuada can take Your case through.
+                      <br />
+                      Every case starts with 1st Stage, depending on the result
+                      – you decide to proceed or not.
+                      <br />
+                      <br />
                       1st Stage includes proof of work on:
-                      <br /><br />
-                      Bank statement review – servicing branch determination, card brand plan
-                      determination, out of the pattern transaction analysis.
-                      Merchant due diligence – funds recipient background check, blacklists, reviews,
+                      <br />
+                      <br />
+                      Bank statement review – servicing branch determination,
+                      card brand plan determination, out of the pattern
+                      transaction analysis. Merchant due diligence – funds
+                      recipient background check, blacklists, reviews,
                       beneficiaries.
                       <br />
-                      Money tracing – define recipients, summarise disputed loss, extract recipient
-                      accounts.
+                      Money tracing – define recipients, summarise disputed
+                      loss, extract recipient accounts.
                       <br />
                       Evidence gathering – collect communication trails.
                       <br />

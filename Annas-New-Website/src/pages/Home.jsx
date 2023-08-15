@@ -106,7 +106,10 @@ export function Home() {
       <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <div className="relative grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div className="absolute -top-[150%]" id="solutionSection"></div>
+            <div
+              className="absolute top-0 sm:-top-[150%]"
+              id="solutionSection"
+            ></div>
             {featuresData.map(({ color, title, icon, description, route }) => (
               <Link to={route} key={title}>
                 <FeatureCard

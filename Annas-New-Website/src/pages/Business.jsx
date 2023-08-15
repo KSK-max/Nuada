@@ -12,7 +12,7 @@ export function Business() {
       <section className="relative bg-blue-gray-50/50 px-4 py-16">
         <div className="relative -mt-64 mb-6 flex w-full min-w-0 flex-col break-words rounded-3xl bg-white shadow-xl shadow-gray-500/5">
           <div className="px-6">
-            <div className="flex flex-wrap justify-center">
+            <div className="flex flex-col flex-wrap justify-center">
               <div className="flex w-full justify-center px-4 lg:order-2 lg:w-3/12">
                 <div className="relative">
                   <div className="-mt-20 w-40"></div>
@@ -21,7 +21,7 @@ export function Business() {
 
               <div className="my-8 text-center">
                 <Typography variant="h2" color="blue-gray" className="mb-2">
-                  Business On Board
+                  Business Onboard
                 </Typography>
               </div>
 
@@ -30,22 +30,33 @@ export function Business() {
                   <div className="flex w-full flex-col items-center px-4 lg:w-9/12">
                     <Typography className="mb-8 font-bold text-black">
                       Nuada assists businesses with incoming chargebacks.
-                      <br /><br />
+                      <br />
+                      <br />
                       A business reply to a chargeback is a representment.
-                      <br /><br />
-                      It consists of gathering the necessary evidence and documentation to build strong
-                      unbiased case in a specific manner.
-                      <br /><br />
-                      Representment allows a business to return profit from up to 80% of disputed sales.
-                      <br /><br />
-                      Our team analyzes transaction data, customer communication, and relevant
-                      documentation to compile a case with compelling evidence that supports the
-                      business’s position.
-                      <br /><br />
-                      This comprehensive approach enhances the chances of a favorable resolution.
-                      <br /><br />
+                      <br />
+                      <br />
+                      It consists of gathering the necessary evidence and
+                      documentation to build strong unbiased case in a specific
+                      manner.
+                      <br />
+                      <br />
+                      Representment allows a business to return profit from up
+                      to 80% of disputed sales.
+                      <br />
+                      <br />
+                      Our team analyzes transaction data, customer
+                      communication, and relevant documentation to compile a
+                      case with compelling evidence that supports the business’s
+                      position.
+                      <br />
+                      <br />
+                      This comprehensive approach enhances the chances of a
+                      favorable resolution.
+                      <br />
+                      <br />
                       When working with Nuada your business gets:
-                      <br /><br />
+                      <br />
+                      <br />
                       Representment letters.
                       <br />
                       Chargeback mitigation plan.

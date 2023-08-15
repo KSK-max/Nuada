@@ -6,7 +6,7 @@ function TermsAndConditions() {
     <main className="flex w-full flex-col items-center justify-center">
       <div className="container flex flex-col items-center justify-center py-4">
         <Typography variant="h2" className="text-center">
-          Privacy Policy for Nuada
+          GDPR
         </Typography>
         <Typography variant="paragraph" className="mt-6">
           At Nuada, we take data privacy and protection seriously. We are

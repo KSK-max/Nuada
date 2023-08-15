@@ -19,7 +19,12 @@ export function Footer({ title, description, socials }) {
               T: +353 1 442 92 00
               <br />
               CRO #729199
+              <br />
+              ACFE #1025256
             </Typography>
+            <div className="mx-auto max-w-[200px] sm:mx-0">
+              <img src="/img/acfe-logo-white.jpg" alt="acfe logo" />
+            </div>
             <div className="mx-auto mb-8 mt-6 flex justify-center gap-2 md:mb-0 lg:justify-start">
               {socials.map(({ color, name, path }) => (
                 <a

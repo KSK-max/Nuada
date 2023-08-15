@@ -38,24 +38,6 @@ export function Diy() {
     },
   ];
 
-  //   useEffect(() => {
-  //     fetch("https://nuada.vercel.app/config").then(async (r) => {
-  //       const { publishableKey } = await r.json();
-  //       console.log(publishableKey);
-  //       setStripePromise(loadStripe(publishableKey));
-  //     });
-  //   }, []);
-
-  //   useEffect(() => {
-  //     fetch("https://nuada.vercel.app/create-payment-intent", {
-  //       method: "POST",
-  //       body: JSON.stringify({}),
-  //     }).then(async (result) => {
-  //       var { clientSecret } = await result.json();
-  //       setClientSecret(clientSecret);
-  //     });
-  //   }, []);
-
   return (
     <>
       <section className="relative block h-[50vh]">
@@ -85,17 +67,20 @@ export function Diy() {
                       DIY allows individuals to save money by taking on tasks
                       yourself instead of hiring professionals. It eliminates
                       labor costs and allows for budget-friendly solution.
-                      <br /><br />
+                      <br />
+                      <br />
                       If you have bought a product or service, if you have
                       invested, if you’ve transacted money by any reason and not
                       happy with the outcome, you have the right to dispute any
                       transaction.
-                      <br /><br />
-                      Access Nuada’s unique knowledge and necessary insights to navigate the
-                      chargeback and dispute process independently, saving time and resources only
-                      from €117! A comprehensive document explaining the necessary steps will be sent to
-                      your email provided. Please note once the document is sent, we cannot issue a
-                      refund.
+                      <br />
+                      <br />
+                      Access Nuada’s unique knowledge and necessary insights to
+                      navigate the chargeback and dispute process independently,
+                      saving time and resources only from €117! A comprehensive
+                      document explaining the necessary steps will be sent to
+                      your email provided. Please note once the document is
+                      sent, we cannot issue a refund.
                     </Typography>
                     <div className="flex justify-center">
                       <Button
