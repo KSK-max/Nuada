@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
 import { Typography, IconButton } from "@material-tailwind/react";
+import { HashLink } from "react-router-hash-link";
 
-const year = new Date().getFullYear();
-
-export function Footer({ title, description, socials, menus, copyright }) {
+export function Footer({ title, description, socials }) {
   return (
     <footer className="relative bg-primary-blue px-4 pb-6 pt-8">
       <div className="container mx-auto">
@@ -14,6 +13,12 @@ export function Footer({ title, description, socials, menus, copyright }) {
             </Typography>
             <Typography className="font-normal text-gray-100">
               {description}
+              <br />
+              E: help@wenuada.ie
+              <br />
+              T: +353 1 442 92 00
+              <br />
+              CRO #729199
             </Typography>
             <div className="mx-auto mb-8 mt-6 flex justify-center gap-2 md:mb-0 lg:justify-start">
               {socials.map(({ color, name, path }) => (
@@ -32,13 +37,17 @@ export function Footer({ title, description, socials, menus, copyright }) {
               ))}
             </div>
           </div>
-          <div className="mx-auto mt-12 flex w-full items-center justify-center lg:mt-0">
+          <div className="mx-auto mt-12 flex w-full flex-col items-center justify-center lg:mt-0">
             <div className="rounded-2xl bg-white">
               <img src="/img/logo-big.png" alt="logo" />
             </div>
+            <div className="mt-4 flex gap-8 text-sm text-white">
+              <HashLink to="/privacy-policy#top">PRIVACY POLICY</HashLink>
+              <HashLink to="/gdpr#top">GDPR</HashLink>
+            </div>
           </div>
         </div>
-        <hr className="my-6 border-gray-300" />
+        <hr className="my-2 border-gray-300" />
       </div>
     </footer>
   );
