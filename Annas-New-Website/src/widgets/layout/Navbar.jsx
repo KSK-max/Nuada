@@ -6,6 +6,7 @@ export function Navbar() {
 
   return (
     <nav className="flex w-full items-center justify-center bg-white px-8 py-4 font-montserrat text-primary-dark">
+      <span id="top" className="absolute top-0"></span>
       <div className="relative flex w-full max-w-6xl items-center justify-between">
         <HashLink to="/">
           <img src="/img/logo-big.png" alt="logo" className="max-w-[200px]" />

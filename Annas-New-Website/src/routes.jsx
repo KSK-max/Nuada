@@ -10,6 +10,8 @@ import BankObligationsTowardsConsumers from "./pages/resource/BankObligationsTow
 import MerchantDueDiligenceByBanks from "./pages/resource/MerchantDueDiligenceByBanks";
 import AMLInBanking from "./pages/resource/AMLInBanking";
 import KYCInBanking from "./pages/resource/KYCInBanking";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import GDPR from "./pages/GDPR";
 
 export const routes = [
   {
@@ -80,6 +82,14 @@ export const routes = [
     // name:"Individual",
     path: "/individual",
     element: <Individual />,
+  },
+  {
+    path: "/privacy-policy",
+    element: <PrivacyPolicy />,
+  },
+  {
+    path: "/gdpr",
+    element: <GDPR />,
   },
 ];
 
