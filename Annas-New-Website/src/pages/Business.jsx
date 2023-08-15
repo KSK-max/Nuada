@@ -21,24 +21,37 @@ export function Business() {
 
               <div className="my-8 text-center">
                 <Typography variant="h2" color="blue-gray" className="mb-2">
-                  Business On Board
+                  Business Onboard
                 </Typography>
               </div>
 
               <div className="mb-10 border-t border-blue-gray-50 py-6 text-center">
                 <div className="mt-2 flex flex-wrap justify-center">
                   <div className="flex w-full flex-col items-center px-4 lg:w-9/12">
-                    <Typography className="mb-8 font-normal text-blue-gray-500">
-                      Nuada assists businesses with incoming chargebacks. A
-                      business reply to a chargeback is a representment. It
-                      consists of gathering the necessary evidence and
-                      documentation to build strong unbiased case in a specific
-                      manner. Representment allows a business to return profit
-                      from up to 80% of disputed sales. Our team analyzes
-                      transaction data, customer communication, and relevant
-                      documentation to compile a case with compelling evidence
-                      that supports the business’s position. This comprehensive
-                      approach enhances the chances of a favorable resolution.
+                    <Typography className="mb-8 font-bold text-black">
+                      Nuada assists businesses with incoming chargebacks.
+                      <br /><br />
+                      A business reply to a chargeback is a representment.
+                      <br /><br />
+                      It consists of gathering the necessary evidence and documentation to build strong
+                      unbiased case in a specific manner.
+                      <br /><br />
+                      Representment allows a business to return profit from up to 80% of disputed sales.
+                      <br /><br />
+                      Our team analyzes transaction data, customer communication, and relevant
+                      documentation to compile a case with compelling evidence that supports the
+                      business’s position.
+                      <br /><br />
+                      This comprehensive approach enhances the chances of a favorable resolution.
+                      <br /><br />
+                      When working with Nuada your business gets:
+                      <br /><br />
+                      <ul>
+                        <li><strong>Representment letters.</strong></li>
+                        <li><strong>Chargeback mitigation plan.</strong></li>
+                        <li><strong>Chargeback ratio report.</strong></li>
+                        <li><strong>Dispute Risk Assessment.</strong></li>
+                      </ul>
                     </Typography>
                     <div className="flex justify-center">
                       <Button
@@ -49,7 +62,7 @@ export function Business() {
                           handlePayment("price_1NctpTEqdJXeTzZ31O03QqlA")
                         }
                       >
-                        Pay
+                        Buy
                       </Button>
                     </div>
                   </div>

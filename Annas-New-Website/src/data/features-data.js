@@ -17,7 +17,7 @@ export const featuresData = [
   },
   {
     color: "red",
-    title: "Business On Board",
+    title: "Business Onboard",
     icon: BriefcaseIcon,
     description: "I want Nuada to take care of my incoming chargebacks.",
       route: "/business",
@@ -25,7 +25,7 @@ export const featuresData = [
   },
   {
     color: "teal",
-    title: "Individual On Board",
+    title: "Individual Onboard",
     icon: FingerPrintIcon,
     description: "I want Nuada to put things right in relation to my past loss.",     
     route: "/individual",

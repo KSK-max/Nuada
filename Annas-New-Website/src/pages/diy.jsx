@@ -81,20 +81,21 @@ export function Diy() {
               <div className="mb-10 border-t border-blue-gray-50 py-6 text-center">
                 <div className="mt-2 flex flex-wrap justify-center">
                   <div className="flex w-full flex-col items-center px-4 lg:w-9/12">
-                    <Typography className="mb-8 font-normal text-blue-gray-500">
+                    <Typography className="mb-8 font-bold text-black">
                       DIY allows individuals to save money by taking on tasks
                       yourself instead of hiring professionals. It eliminates
-                      labor costs and allows for budget-friendly solution. If
-                      you have bought a product or service, if you have
+                      labor costs and allows for budget-friendly solution.
+                      <br /><br />
+                      If you have bought a product or service, if you have
                       invested, if you’ve transacted money by any reason and not
                       happy with the outcome, you have the right to dispute any
-                      transaction. Access Nuada’s unique knowledge and necessary
-                      insights to navigate the chargeback and dispute process
-                      independently, saving time and resources only from €117!
-                      Please note this payment is not refundable. You can cancel
-                      your next subscription payment by emailing
-                      help@wenuada.ie, before new month or in the first 2 days
-                      of a new month.
+                      transaction.
+                      <br /><br />
+                      Access Nuada’s unique knowledge and necessary insights to navigate the
+                      chargeback and dispute process independently, saving time and resources only
+                      from €117! A comprehensive document explaining the necessary steps will be sent to
+                      your email provided. Please note once the document is sent, we cannot issue a
+                      refund.
                     </Typography>
                     <div className="flex justify-center">
                       <Button
@@ -103,7 +104,7 @@ export function Diy() {
                         }
                         className="bg-primary-blue text-lg"
                       >
-                        Pay
+                        Buy
                       </Button>
                     </div>
                   </div>
