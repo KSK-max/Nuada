@@ -74,7 +74,7 @@ export function Business() {
                           handlePayment("price_1NctpTEqdJXeTzZ31O03QqlA")
                         }
                       >
-                        Pay
+                        Onboard
                       </Button>
                     </div>
                   </div>

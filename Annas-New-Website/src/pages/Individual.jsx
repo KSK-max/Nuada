@@ -63,7 +63,7 @@ export function Individual() {
                       <Button
                         color="blue"
                         variant="filled"
-                        className="bg-primary-blue"
+                        className="bg-primary-blue text-lg"
                         onClick={() =>
                           handlePayment("price_1NctqfEqdJXeTzZ3tWiMQkQL")
                         }
